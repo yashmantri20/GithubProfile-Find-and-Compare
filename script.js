@@ -1,13 +1,15 @@
 class finder
 {
-    async fetchUsers(user,c,id)
+    async fetchUsers(user,c,load)
         {
-            document.getElementById(id).innerHTML = ""
+            let loader = `<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>`;
+            document.getElementById(load).innerHTML = loader;
             const profile = await fetch(`https://api.github.com/users/${user}`)
             const data = await profile.json() ;
+            document.getElementById(load).innerHTML = "";
             if(data.message)
                 {
-                    alert("User Not Found")
+                    document.getElementById(load).innerHTML = `<br/><b style="color: red;">User Not Found</b>`;
                 }
             else
                 {
@@ -140,7 +142,7 @@ document.querySelector('#user-form').addEventListener('submit', (e) =>
     e.preventDefault();
     const c = '#user-form'
     const username = document.querySelector('#username').value
-    git.fetchUsers(username,c,"match-list")
+    git.fetchUsers(username,c,"loading")
 });
 
 
@@ -149,5 +151,5 @@ document.querySelector('#user-form1').addEventListener('submit', (e) =>
     e.preventDefault();
     const c = '#user-form1'
     const username = document.querySelector('#username1').value
-    git.fetchUsers(username,c,"match-list1")
+    git.fetchUsers(username,c,"loading1")
 });
