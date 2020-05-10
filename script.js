@@ -35,31 +35,31 @@ class finder
             table.innerHTML = `
                 <div id="class">
                 <tr>
-                    <td><b>Name :</b> ${data.name}</td>
+                    <td style="color:black";><b>Name :</b> ${data.name}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Bio :</b> ${data.bio} </td>
+                    <td style="color:black";><b>Location :</b> ${data.location} </td>
                 </tr>
 
                 <tr>
-                    <td><b>Followers :</b> ${data.followers}</td>
+                    <td style="color:black";><b>Followers :</b> ${data.followers}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Following :</b> ${data.following}</td>
+                    <td style="color:black";><b>Following :</b> ${data.following}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Total Repositories :</b> ${data.public_repos}</td>
+                    <td style="color:black";><b>Total Repositories :</b> ${data.public_repos}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Total Stars :</b> ${stars}</td>
+                    <td style="color:black";><b>Total Stars :</b> ${stars}</td>
                 </tr>
 
                 <tr>
-                    <td><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
+                    <td style="color:black";><b>Github Url :</b> <a href="${data.html_url}">${data.html_url}</a></td>
                 </tr>
                 </div>
             `;
@@ -110,7 +110,7 @@ async function searchUser(searchText,id,search,clear){
             });
 
             const html = matches.slice(0,6).map(match => `<div class="autocomplete">
-            <p style="padding-top: 15px;"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
+            <p style="padding-top: 15px;color:black;font-weight:600"><img class="img" src=${match.avatar_url} alt=${match.avatar_url}/> ${match.login}</p>
             </div>`).join('');
             matchList.innerHTML = html;
             matchList.addEventListener('click', (e) => {
@@ -130,8 +130,8 @@ async function searchUser(searchText,id,search,clear){
         }) 
 }
 
-search.addEventListener('input', debounce( () => searchUser(search.value,"match-list",search,"clear"),800));
-search1.addEventListener('input', debounce( () => searchUser(search1.value,"match-list1",search1,"clear1"),800));
+search.addEventListener('input', debounce( () => searchUser(search.value,"match-list",search,"clear"),600));
+search1.addEventListener('input', debounce( () => searchUser(search1.value,"match-list1",search1,"clear1"),600));
 
 const git = new finder();
 
