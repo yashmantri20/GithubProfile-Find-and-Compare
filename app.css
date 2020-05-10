@@ -1,0 +1,138 @@
+/* Compare page */
+
+.git{
+  background: url(./coffee-apple.jpg) no-repeat center center fixed;
+  font-family: Arial;
+  /* height: 100vh; */
+}
+
+.split {
+  height: 80vh;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  /* top: 0; */
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  position: absolute;
+}
+
+.right {
+  right: 0;
+  position: absolute;
+
+} 
+
+.form-control{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+  border-radius: 15px;
+}
+
+.btn{
+  width: 180px;
+  margin: auto;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .form-control{
+    width: auto;
+    border-radius: 15px;
+  }
+
+  .btn{
+    width: auto;
+    border-radius: 15px;
+  }
+}
+
+td{
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+
+.footer1{
+  text-align: center;
+  color: aliceblue;
+  margin-top: 544px;
+}
+
+/* Nav Bar */
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  color: lightseagreen;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.topnav a.active {
+  color: white;
+}
+
+/* Home page */
+
+.home{
+  background: url(./coffee-apple.jpg) no-repeat center center fixed;
+  font-family: Arial;
+  height: 100%;
+}
+
+.info{
+  color: lightblue;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.footer{
+  text-align: center;
+  color: aliceblue;
+  margin-top: 141px;
+}
+
+#div1 {
+  font-size:48px;
+}
+
+
+.autocomplete {
+  width: auto;
+  text-align: center;
+  margin-top: 8px;
+  color: white;
+  box-shadow: 0px 1px 5px 1px #000;
+  padding: 0.1rem;
+}
+
+.autocomplete:hover {
+  background: rgb(183, 187, 187);
+  padding: 0.1rem;
+}
+
+#match-list{
+  overflow: hidden;
+}
+
+.img{
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
