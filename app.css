@@ -114,6 +114,19 @@ td{
   font-weight:600;
 }
 
+/* .info h3:hover{
+  color:steelblue;
+} */
+.info h3 {
+  animation: color-change 2s infinite;
+}
+
+@keyframes color-change {
+  0% { color: steelblue; }
+  50% { color: black; }
+  100% { color: steelblue; }
+}
+
 .footer{
   text-align: center;
   color: black;
@@ -128,6 +141,12 @@ td{
   font-size:48px;
   font-weight:600;
 }
+
+#div1:hover{
+  color: steelblue;
+}
+
+/* searchBar */
 
 .autocomplete {
   width: auto;
@@ -153,12 +172,7 @@ td{
   border-radius: 5px;
 }
 
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
+/* loader */
 
 .lds-roller {
   display: inline-block;
@@ -180,6 +194,7 @@ td{
   background: black;
   margin: -4px 0 0 -4px;
 }
+
 .lds-roller div:nth-child(1) {
   animation-delay: -0.036s;
 }
