@@ -130,8 +130,8 @@ async function searchUser(searchText,id,search,clear){
         }) 
 }
 
-search.addEventListener('input', debounce( () => searchUser(search.value,"match-list",search,"clear"),1000));
-search1.addEventListener('input', debounce( () => searchUser(search1.value,"match-list1",search1,"clear1"),1000));
+search.addEventListener('input', debounce( () => searchUser(search.value,"match-list",search,"clear"),800));
+search1.addEventListener('input', debounce( () => searchUser(search1.value,"match-list1",search1,"clear1"),800));
 
 const git = new finder();
 
